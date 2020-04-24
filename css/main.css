@@ -1,0 +1,113 @@
+html {
+  max-height: 100vh;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+  display: flex;
+}
+
+body {
+  font-family: "Segoe", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  margin: 8px 0 8px 16px;
+}
+
+.header_menu {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  margin-right: 16px;
+}
+
+.header_item {
+  margin-right: 12px;
+}
+a:hover {
+  color: #ff6699;
+}
+
+.header__link {
+  color: #f8c7d0;
+  transition-duration: 0.5s;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 32px auto;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.main__description {
+  max-width: 465px;
+  text-align: center;
+}
+.main__heading {
+  margin: 8px 0 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+.main__text {
+  margin: 0 4px 16px;
+}
+
+.main__pinkMatka {
+  font-weight: bold;
+  color: #f8c7d0;
+}
+
+@media (min-width: 676px) {
+  .header__switcher {
+    display: none;
+  }
+}
+
+@media (max-width: 675px) {
+  .header_menu {
+    display: none;
+    flex-direction: column;
+    margin-right: 30px;
+  }
+
+  .header {
+    align-items: start;
+  }
+
+  .header_menu--visible {
+    display: flex;
+    align-items: center;
+  }
+
+  .header_item {
+    margin: 8px;
+    text-align: right;
+  }
+
+  .header__switcher {
+    border: none;
+    background: none;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+}
